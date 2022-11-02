@@ -24,22 +24,18 @@ memory.
    - it is the **running program's view of memory** in the system. 
    - The address space of a process contains all of the memory state of the
 running program (the code of the program, a stack, a heap). 
-<br>
-![as](./Screenshot%20from%202022-11-02%2015-44-12.png)
-2. What is the job of the OS in this set of notes?<br>
+2. What is the job of the OS in this set of notes?
     To virtualize memory. <br>
 
-    The OS, with some serious hardware help, will
-take each of these virtual memory references, and turn them into physical addresses, which can be presented to the physical memory in order to
-fetch the desired information. 
+    The OS, with some serious hardware help, will take each of these virtual memory references, and turn them into physical addresses, which can be presented to the physical memory in order to
+    fetch the desired information. 
 
-    The OS will do this for many processes at
-once, making sure to protect programs from one another, as well as protect the OS. 
+    The OS will do this for many processes at once, making sure to protect programs from one another, as well as protect the OS. 
 
 > Ever write a C program that prints out a pointer? The value you see
 (some large number, often printed in hexadecimal), is a virtual address.
 
-3. Goals of a virtual memory (VM) system?
+1. Goals of a virtual memory (VM) system?
     - Transparency: The OS should implement virtual memory in a way that is *invisible* to
 the running program. Thus, the program shouldn’t be aware of the fact
 that memory is virtualized;
