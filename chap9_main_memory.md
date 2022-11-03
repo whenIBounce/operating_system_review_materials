@@ -35,10 +35,32 @@ running program (the code of the program, a stack, a heap).
 > Ever write a C program that prints out a pointer? The value you see
 (some large number, often printed in hexadecimal), is a virtual address.
 
-1. Goals of a virtual memory (VM) system?
+3. Goals of a virtual memory (VM) system?
     - Transparency: The OS should implement virtual memory in a way that is *invisible* to
 the running program. Thus, the program shouldn’t be aware of the fact
 that memory is virtualized;
     - Efficiency: both time and space, (i.e., not using too much
 memory for structures needed to support virtualization). 
     - Protection -> isolation
+
+## Memory API
+1. The `malloc()` call and the `free()` call
+    ```
+    int *x = malloc(10 * sizeof(int));
+    printf("%d\n", sizeof(x));
+    ```
+    What is the output? Why? (hint: *compile-time* operator)
+
+    ```
+    int x[10];
+    printf("%d\n", sizeof(x));
+    ```
+    What is the output? Why?
+2. Give an example for each of the following common errors:
+   - Segmentation fault
+   - Buffer overflow
+   - Memory leak
+   - Dangling pointer
+   - Double free
+3. Compile and Run `memory_api.c`
+4. Other Calls: `calloc()`, `realloc()`
