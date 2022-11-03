@@ -62,5 +62,5 @@ memory for structures needed to support virtualization).
    - Memory leak
    - Dangling pointer
    - Double free
-3. Compile and Run `memory_api.c`
+3. Compile and Run `./code/memory_api.c`
 4. Other Calls: `calloc()`, `realloc()`
