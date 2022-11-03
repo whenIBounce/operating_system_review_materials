@@ -8,7 +8,7 @@ to each *process*, specifically that it has its own large and private memory;
 > with some *hardware* help, the OS will turn these pretend virtual addresses into real
 physical addresses, and thus be able to locate the desired information
 
-## Intuition: Why the OS want to provide this illusion(virtual memory)?
+## Intuition: Why does the OS want to provide this illusion(virtual memory)?
 Mostly **ease of use**: the OS will give each program the view that it
 has a *large contiguous **address space*** to put its code and data into; thus, as a
 programmer, you never have to worry about things like “where should I store this
@@ -20,11 +20,10 @@ memory.
 
 ## Address Space
 1. What is address space?
-   - It was invented to create an easy to use abstractino of physical memory.
-   - it is the **running program's view of memory** in the system. 
-   - The address space of a process contains all of the memory state of the
-running program (the code of the program, a stack, a heap). 
-2. What is the job of the OS in this set of notes?
+   - It was invented to create an easy to use abstraction of physical memory.
+   - It is the **running program's view of memory** in the system. 
+   - The address space of a process contains **all** of the memory state of the running program (the code of the program, a stack, a heap). 
+1. What is the job of the OS in this set of notes?
     To virtualize memory. <br>
 
     The OS, with some serious hardware help, will take each of these virtual memory references, and turn them into physical addresses, which can be presented to the physical memory in order to
@@ -63,4 +62,4 @@ memory for structures needed to support virtualization).
    - Dangling pointer
    - Double free
 3. Compile and Run `./code/memory_api.c`
-4. Other Calls: `calloc()`, `realloc()`
+4. Other Calls: `calloc()`, `realloc()`.
